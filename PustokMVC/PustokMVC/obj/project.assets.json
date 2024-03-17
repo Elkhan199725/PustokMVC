@@ -7845,11 +7845,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Elkhan Mammadli\\Desktop\\CodeAcademy_P238\\PustokMVC\\PustokMVC\\PustokMVC.csproj",
+      "projectUniqueName": "C:\\Users\\Elkhan Mammadli\\Desktop\\PustokWebApp\\PustokMVC\\PustokMVC\\PustokMVC.csproj",
       "projectName": "PustokMVC",
-      "projectPath": "C:\\Users\\Elkhan Mammadli\\Desktop\\CodeAcademy_P238\\PustokMVC\\PustokMVC\\PustokMVC.csproj",
+      "projectPath": "C:\\Users\\Elkhan Mammadli\\Desktop\\PustokWebApp\\PustokMVC\\PustokMVC\\PustokMVC.csproj",
       "packagesPath": "C:\\Users\\Elkhan Mammadli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Elkhan Mammadli\\Desktop\\CodeAcademy_P238\\PustokMVC\\PustokMVC\\obj\\",
+      "outputPath": "C:\\Users\\Elkhan Mammadli\\Desktop\\PustokWebApp\\PustokMVC\\PustokMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
