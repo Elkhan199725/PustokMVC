@@ -31552,6 +31552,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\c97eb221-b566-4b86-a5f2-236d2d073645yidasysayfaysfgysdfgufahdUFDUFADHUSFDHUSAFGUISAGUISFDGYSFDGU.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\d3e677fb-e21a-4a5b-b363-7483881a9c32.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>PustokMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PustokMVC</BasePath>
+      <RelativePath>uploads/sliders/d3e677fb-e21a-4a5b-b363-7483881a9c32.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\d3e677fb-e21a-4a5b-b363-7483881a9c32.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\home-4-slider-1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>

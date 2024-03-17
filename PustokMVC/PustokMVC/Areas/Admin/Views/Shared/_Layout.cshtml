@@ -130,13 +130,29 @@
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span>
-                </a>
-            </li>
+            <!-- Sidebar - Tables List -->
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
+                <!-- ... other items ... -->
+                <!-- Nav Item - Tables Dropdown -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTables" aria-expanded="true" aria-controls="collapseTables">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Tables</span>
+                    </a>
+                    <div id="collapseTables" class="collapse" aria-labelledby="headingTables" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Tables:</h6>
+                            <a class="collapse-item" href="/Admin/Slider">Sliders</a>
+                            <a class="collapse-item" href="/Admin/Genre">Genres</a>
+                            <!-- Add other tables as needed -->
+                        </div>
+                    </div>
+                </li>
+
+                <!-- ... other items ... -->
+
+            </ul>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 

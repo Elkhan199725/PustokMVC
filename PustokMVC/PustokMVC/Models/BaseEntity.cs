@@ -47,5 +47,19 @@
         /// Optional. Can be used to track the latest modification time of the entity. If not set, it remains null.
         /// </remarks>
         public DateTime? ModifiedDate { get; set; }
+
+        /// <summary>
+        /// Sets the CreatedDate and ModifiedDate to the current UTC datetime.
+        /// </summary>
+        public void SetCreationAndModificationDate()
+        {
+            DateTime now = DateTime.UtcNow;
+            // If CreatedDate is default, it means the entity is newly created.
+            if (CreatedDate == default)
+            {
+                CreatedDate = now;
+            }
+            ModifiedDate = now;
+        }
     }
 }

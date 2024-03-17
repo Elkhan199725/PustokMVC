@@ -78,5 +78,16 @@ namespace PustokMVC.Models
         /// </remarks>
         [NotMapped]
         public IFormFile? ImageFile { get; set; }
+
+        public void UpdateSlider(Slider updatedSlider)
+        {
+            Title1 = updatedSlider.Title1;
+            Title2 = updatedSlider.Title2;
+            Description = updatedSlider.Description;
+            RedirectUrl = updatedSlider.RedirectUrl;
+            RedirectUrlText = updatedSlider.RedirectUrlText;
+            // Assuming ImageUrl is handled separately due to file upload
+            // IsActive, CreatedDate, and ModifiedDate are handled elsewhere if needed
+        }
     }
 }
