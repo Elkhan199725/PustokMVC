@@ -1,11 +1,35 @@
-﻿@model List<Slider>
+﻿@model IEnumerable<Slider>
+
+@if (ViewBag.SearchMessage != null)
+{
+    <div class="alert alert-info">@ViewBag.SearchMessage</div>
+}
+
+@foreach (var slider in Model)
+{
+    // Display slider details here.
+}
+
 @{
     int counter = 0;
 }
+
 <div class="container-fluid">
-    <div class="row align-items-center justify-content-between">
-        <h1>Sliders:</h1>
-        <a asp-action="create" asp-controller="slider" class="btn btn-primary">Create</a>
+    <div class="container-fluid">
+        <div class="row align-items-center justify-content-between mb-3">
+            <div class="col-auto">
+                <h1>Sliders:</h1>
+            </div>
+            <div class="col">
+                <form asp-action="Search" asp-controller="Slider" method="get" class="form-inline justify-content-end">
+                    <input type="text" class="form-control mr-2" id="searchTerm" name="searchTerm" placeholder="Enter Slider Name">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+            <div class="col-auto">
+                <a asp-action="create" asp-controller="slider" class="btn btn-primary">Create</a>
+            </div>
+        </div>
     </div>
 
     <table class="table">
@@ -32,6 +56,7 @@
                     <td>
                         <a asp-action="update" asp-controller="slider" asp-route-id="@item.Id" class="btn btn-warning">Update</a>
                         <a asp-action="delete" asp-controller="slider" asp-route-id="@item.Id" class="btn btn-danger delete-btn">Delete</a>
+                        <a asp-action="softDelete" asp-controller="slider" asp-route-id="@item.Id" class="btn btn-info delete-btn">SoftDelete</a>
                     </td>
                 </tr>
             }

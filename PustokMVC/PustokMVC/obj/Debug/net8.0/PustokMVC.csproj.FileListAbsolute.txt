@@ -756,3 +756,10 @@ C:\Users\Elkhan Mammadli\Desktop\PustokWebApp\PustokMVC\PustokMVC\obj\Debug\net8
 C:\Users\Elkhan Mammadli\Desktop\PustokWebApp\PustokMVC\PustokMVC\obj\Debug\net8.0\PustokMVC.pdb
 C:\Users\Elkhan Mammadli\Desktop\PustokWebApp\PustokMVC\PustokMVC\obj\Debug\net8.0\PustokMVC.genruntimeconfig.cache
 C:\Users\Elkhan Mammadli\Desktop\PustokWebApp\PustokMVC\PustokMVC\obj\Debug\net8.0\ref\PustokMVC.dll
+C:\Users\Elkhan Mammadli\Desktop\PustokWebApp\PustokMVC\PustokMVC\bin\Debug\net8.0\System.Web.Mvc.dll
+C:\Users\Elkhan Mammadli\Desktop\PustokWebApp\PustokMVC\PustokMVC\bin\Debug\net8.0\System.Web.Razor.dll
+C:\Users\Elkhan Mammadli\Desktop\PustokWebApp\PustokMVC\PustokMVC\bin\Debug\net8.0\System.Web.Helpers.dll
+C:\Users\Elkhan Mammadli\Desktop\PustokWebApp\PustokMVC\PustokMVC\bin\Debug\net8.0\System.Web.WebPages.Deployment.dll
+C:\Users\Elkhan Mammadli\Desktop\PustokWebApp\PustokMVC\PustokMVC\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
+C:\Users\Elkhan Mammadli\Desktop\PustokWebApp\PustokMVC\PustokMVC\bin\Debug\net8.0\System.Web.WebPages.dll
+C:\Users\Elkhan Mammadli\Desktop\PustokWebApp\PustokMVC\PustokMVC\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll

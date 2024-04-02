@@ -1,7 +1,14 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using PustokMVC.Business.Implementations;
-using PustokMVC.Business.Interfaces;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using PustokMVC;
 using PustokMVC.Data;
+using PustokMVC.Models;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,10 +34,41 @@ app.Run();
 /// </remarks>
 void ConfigureServices(IServiceCollection services, IConfiguration configuration)
 {
+    // MVC
     services.AddControllersWithViews();
-    services.AddDbContext<PustokDbContext>(opt =>
-        opt.UseSqlServer(configuration.GetConnectionString("default")));
-    services.AddScoped<IGenreService, GenreService>();
+
+    // Entity Framework and Identity
+    ConfigureEntityFramework(services, configuration);
+    ConfigureIdentity(services);
+
+    // Session
+    services.AddSession(opt => opt.IdleTimeout = TimeSpan.FromSeconds(20));
+
+    // Custom Services
+    services.AddServices();
+}
+
+void ConfigureEntityFramework(IServiceCollection services, IConfiguration configuration)
+{
+    services.AddDbContext<PustokDbContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("default")));
+}
+
+void ConfigureIdentity(IServiceCollection services)
+{
+    services.AddIdentity<AppUser, IdentityRole>(opt =>
+    {
+        // Password settings
+        opt.Password.RequireNonAlphanumeric = true;
+        opt.Password.RequiredLength = 8;
+        opt.Password.RequireUppercase = true;
+        opt.Password.RequireLowercase = true;
+        opt.Password.RequireDigit = true;
+
+        // User settings
+        opt.User.RequireUniqueEmail = true;
+    })
+    .AddEntityFrameworkStores<PustokDbContext>()
+    .AddDefaultTokenProviders();
 }
 
 /// <summary>
@@ -53,6 +91,8 @@ void ConfigureMiddleware(WebApplication app)
     app.UseHttpsRedirection();
     app.UseStaticFiles();
     app.UseRouting();
+    app.UseSession();
+    app.UseAuthentication();
     app.UseAuthorization();
 
     ConfigureRoutes(app);
@@ -77,3 +117,5 @@ void ConfigureRoutes(WebApplication app)
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");
 }
+
+

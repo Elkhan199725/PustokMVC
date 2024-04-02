@@ -20,7 +20,6 @@ namespace PustokMVC.Models
         /// </remarks>
         [Required]
         public int BookId { get; set; }
-
         /// <summary>
         /// The URL of the image.
         /// </summary>
@@ -29,7 +28,6 @@ namespace PustokMVC.Models
         /// </remarks>
         [Required]
         public string? ImageUrl { get; set; }
-
         /// <summary>
         /// Indicates the type of the image: true for the main poster (cover), false for the back poster, and null for additional detail images.
         /// </summary>
@@ -38,7 +36,6 @@ namespace PustokMVC.Models
         /// back cover images, and any other detail images that are neither the main nor the back cover.
         /// </remarks>
         public bool? IsPoster { get; set; } // true for Poster, false for BackPoster, null for Detail
-
         /// <summary>
         /// Navigation property to the associated book.
         /// </summary>

@@ -17,7 +17,7 @@ namespace PustokMVC.Areas.Admin.Controllers
         }
 
         public async Task<IActionResult> Index()
-            => View(await _genreService.GetAllAsync(x=>x.IsActive == false && x.Name == "Sci-Fi","Books"));
+            => View(await _genreService.GetAllAsync());
 
         public IActionResult Create()
             => View();
@@ -109,6 +109,6 @@ namespace PustokMVC.Areas.Admin.Controllers
             }
             return Ok();
         }
-             
+
     }
 }

@@ -7873,8 +7873,16 @@
       "PackagePath": "staticwebassets\\uploads\\books\\f935246c-9d14-45bb-8470-9a256c05a224product-details-1.jpg"
     },
     {
+      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\PustokWebApp\\PustokMVC\\PustokMVC\\wwwroot\\uploads\\sliders\\1f2d57d8-7eb6-41d0-84a0-4f9dd5cbb4f8.jpg",
+      "PackagePath": "staticwebassets\\uploads\\sliders\\1f2d57d8-7eb6-41d0-84a0-4f9dd5cbb4f8.jpg"
+    },
+    {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\PustokWebApp\\PustokMVC\\PustokMVC\\wwwroot\\uploads\\sliders\\5ab6e886-e202-4676-94f7-2f67bcf24969home-4-slider-2.jpg",
       "PackagePath": "staticwebassets\\uploads\\sliders\\5ab6e886-e202-4676-94f7-2f67bcf24969home-4-slider-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\PustokWebApp\\PustokMVC\\PustokMVC\\wwwroot\\uploads\\sliders\\5ed999da-b541-49ad-96eb-6877ab48d8a6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\sliders\\5ed999da-b541-49ad-96eb-6877ab48d8a6.jpg"
     },
     {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\PustokWebApp\\PustokMVC\\PustokMVC\\wwwroot\\uploads\\sliders\\9962bd91-7490-490f-b1e2-439270d5499dhome-4-slider-2.jpg",
@@ -7887,6 +7895,10 @@
     {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\PustokWebApp\\PustokMVC\\PustokMVC\\wwwroot\\uploads\\sliders\\c97eb221-b566-4b86-a5f2-236d2d073645yidasysayfaysfgysdfgufahdUFDUFADHUSFDHUSAFGUISAGUISFDGYSFDGU.jpg",
       "PackagePath": "staticwebassets\\uploads\\sliders\\c97eb221-b566-4b86-a5f2-236d2d073645yidasysayfaysfgysdfgufahdUFDUFADHUSFDHUSAFGUISAGUISFDGYSFDGU.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\PustokWebApp\\PustokMVC\\PustokMVC\\wwwroot\\uploads\\sliders\\d359182b-8ae8-467f-9241-02193951ce1d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\sliders\\d359182b-8ae8-467f-9241-02193951ce1d.jpg"
     },
     {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\PustokWebApp\\PustokMVC\\PustokMVC\\wwwroot\\uploads\\sliders\\d3e677fb-e21a-4a5b-b363-7483881a9c32.jpg",

@@ -55,4 +55,5 @@ public class PustokDbContext : DbContext
     /// Gets or sets the DbSet for BookImages.
     /// </summary>
     public DbSet<BookImage> BookImages { get; set; }
+    public DbSet<AppUser> Users { get; set; }
 }

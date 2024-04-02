@@ -21,8 +21,7 @@ namespace PustokMVC.Models
         /// </remarks>
         [Required]
         [StringLength(50)]
-        public string? Name { get; set; }
-
+        public string Name { get; set; }
         /// <summary>
         /// The collection of books associated with this genre.
         /// </summary>

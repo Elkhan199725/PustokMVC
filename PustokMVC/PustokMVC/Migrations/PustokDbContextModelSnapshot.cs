@@ -84,16 +84,16 @@ namespace PustokMVC.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<bool?>("IsAvailable")
+                    b.Property<bool>("IsAvailable")
                         .HasColumnType("bit");
 
-                    b.Property<bool?>("IsBestSeller")
+                    b.Property<bool>("IsBestSeller")
                         .HasColumnType("bit");
 
-                    b.Property<bool?>("IsFeatured")
+                    b.Property<bool>("IsFeatured")
                         .HasColumnType("bit");
 
-                    b.Property<bool?>("IsNew")
+                    b.Property<bool>("IsNew")
                         .HasColumnType("bit");
 
                     b.Property<DateTime?>("ModifiedDate")

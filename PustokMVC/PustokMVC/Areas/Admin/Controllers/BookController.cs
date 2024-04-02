@@ -46,32 +46,32 @@ namespace PustokMVC.Areas.Admin.Controllers
                 ModelState.AddModelError("PosterImageFile", "Size must be lower than 2mb!");
                 return View();
             }
-            BookImage posterImage = new BookImage()
-            {
-                Book = book,
-                ImageUrl = book.PosterImageFile.SaveFile(_env.WebRootPath, "uploads/books"),
-                IsPoster = true
-            };
-            await _context.BookImages.AddAsync(posterImage);
+            //BookImage posterImage = new BookImage()
+            //{
+            //    Book = book,
+            //    ImageUrl = book.PosterImageFile.SaveFile(_env.WebRootPath, "uploads/books",book.ImageFiles),
+            //    IsPoster = true
+            //};
+            //await _context.BookImages.AddAsync(posterImage);
 
-            if (book.HoverImageFile.ContentType != "image/jpeg" && book.HoverImageFile.ContentType != "image/png")
-            {
-                ModelState.AddModelError("HoverImageFile", "Content type must be png or jpeg!");
-                return View();
-            }
+            //if (book.HoverImageFile.ContentType != "image/jpeg" && book.HoverImageFile.ContentType != "image/png")
+            //{
+            //    ModelState.AddModelError("HoverImageFile", "Content type must be png or jpeg!");
+            //    return View();
+            //}
 
-            if (book.HoverImageFile.Length > 2097152)
-            {
-                ModelState.AddModelError("HoverImageFile", "Size must be lower than 2mb!");
-                return View();
-            }
-            BookImage hoverImage = new BookImage()
-            {
-                Book = book,
-                ImageUrl = book.HoverImageFile.SaveFile(_env.WebRootPath, "uploads/books"),
-                IsPoster = false
-            };
-            await _context.BookImages.AddAsync(hoverImage);
+            //if (book.HoverImageFile.Length > 2097152)
+            //{
+            //    ModelState.AddModelError("HoverImageFile", "Size must be lower than 2mb!");
+            //    return View();
+            //}
+            //BookImage hoverImage = new BookImage()
+            //{
+            //    Book = book,
+            //    ImageUrl = book.HoverImageFile.SaveFile(_env.WebRootPath, "uploads/books", book.ImageFiles),
+            //    IsPoster = false
+            //};
+            //await _context.BookImages.AddAsync(hoverImage);
 
 
             if (book.ImageFiles is not null)
@@ -81,19 +81,23 @@ namespace PustokMVC.Areas.Admin.Controllers
                     if (imageFile.ContentType != "image/jpeg" && imageFile.ContentType != "image/png")
                     {
                         ModelState.AddModelError("ImageFiles", "Content type must be png or jpeg!");
-                        return View();
+                        return View(book); // Ensure to return the model to persist form data and show errors
                     }
 
-                    if (imageFile.Length > 2097152)
+                    if (imageFile.Length > 2097152) // 2 MB
                     {
                         ModelState.AddModelError("ImageFiles", "Size must be lower than 2mb!");
-                        return View();
+                        return View(book); // Ensure to return the model to persist form data and show errors
                     }
+
+                    // Generate the file name and save the file
+                    var savedFileName = FileManager.SaveFile(_env.WebRootPath, "uploads/books", imageFile); // Correct usage
+
                     BookImage bookImage = new BookImage()
                     {
                         Book = book,
-                        ImageUrl = imageFile.SaveFile(_env.WebRootPath, "uploads/books"),
-                        IsPoster = null
+                        ImageUrl = savedFileName, // Use the returned file name which includes the path
+                        IsPoster = null // Assuming you handle the IsPoster assignment elsewhere
                     };
                     await _context.BookImages.AddAsync(bookImage);
                 }

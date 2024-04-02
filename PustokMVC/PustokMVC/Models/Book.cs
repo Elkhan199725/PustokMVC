@@ -40,12 +40,16 @@ namespace PustokMVC.Models
         [Required]
         public double? SalePrice { get; set; }
         public double? DiscountPercent { get; set; }
-        public bool? IsFeatured { get; set; }
-        public bool? IsNew { get; set; }
-        public bool? IsBestSeller { get; set; }
-        public bool? IsAvailable { get; set; }
         [Required]
-        public int? StockCount { get; set; }
+        public bool IsFeatured { get; set; }
+        [Required]
+        public bool IsNew { get; set; }
+        [Required]
+        public bool IsBestSeller { get; set; }
+        [Required]
+        public bool IsAvailable { get; set; }
+        [Required]
+        public int StockCount { get; set; }
         public Genre? Genre { get; set; }
         public Author? Author { get; set; }
         public List<BookImage>? BookImages { get; set; }
@@ -55,5 +59,7 @@ namespace PustokMVC.Models
         public IFormFile? HoverImageFile { get; set; }
         [NotMapped]
         public List<IFormFile>? ImageFiles { get; set; }
+        [NotMapped]
+        public List<int>? BookImageIds { get; set; }
     }
 }
